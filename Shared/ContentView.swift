@@ -12,7 +12,7 @@ struct ContentView: View {
         Text("Hello, world!")
             .padding()
         TabView{
-            DetailPlace()
+            DetailPlace(place: ModelData().placeData[0])
         }
     }
 }
