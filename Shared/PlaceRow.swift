@@ -12,13 +12,11 @@ struct PlaceRow: View {
     
     var body: some View {
         HStack{
-
             place.image
                 .resizable()
                 .frame(width: 50, height: 50)
             Text(place.name)
-            
-                
+ 
         }
     }
 }

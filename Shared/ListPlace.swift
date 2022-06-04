@@ -9,6 +9,7 @@ import SwiftUI
 
 
 struct ListPlace: View {
+    
     var body: some View {
         NavigationView{
             List(ModelData().placeData){ place in
@@ -17,10 +18,9 @@ struct ListPlace: View {
                 }label:{
                     PlaceRow(place: place)
                 }
-            }
-            .navigationTitle("Landmarks")
+            }.foregroundColor(.brown)
+                .navigationTitle("Cafe Most Popular")
         }
-
     }
 }
 

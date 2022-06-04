@@ -11,28 +11,35 @@ struct DetailPlace: View {
     var place: PlaceData
     
     var body: some View {
-        VStack {
-            MapView(coordinate: place.locationCoordinate)
-                       .frame(height: 300)
-            
-            CircleImage(image: place.image).offset(y: -130)
-                .padding(.bottom, -130)
+        ScrollView{
+            VStack {
+                MapView(coordinate: place.locationCoordinate)
+                           .frame(height: 300)
+                
+                CircleImage(image: place.image).offset(y: -130)
+                    .padding(.bottom, -130)
 
 
-                   VStack(alignment: .leading) {
-                       Text(place.name)
-                           .font(.title)
+                       VStack(alignment: .leading) {
+                           Text(place.name)
+                               .font(.title)
 
-                       HStack {
-                           Text(place.park)
-                               .font(.subheadline)
-                           Spacer()
-                           Text(place.state)
-                       }
-                       .font(.subheadline)
-                       .foregroundColor(.secondary)
-                   }
-}
+                           HStack {
+                               Text(place.park)
+                                   .font(.subheadline)
+                               Spacer()
+                               Text(place.state)
+                           }
+                           .font(.subheadline)
+                           .foregroundColor(.secondary)
+                       }.padding()
+                VStack{
+                    Text(place.description)
+                }
+                .padding()
+    }
+        }
+
     }
 }
 

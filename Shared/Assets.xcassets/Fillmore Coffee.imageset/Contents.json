@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "Fillmore Coffee.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Fillmore Coffee.jpeg",
       "idiom" : "universal",
       "scale" : "2x"
     },
